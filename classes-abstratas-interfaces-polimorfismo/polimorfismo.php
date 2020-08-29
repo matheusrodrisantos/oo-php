@@ -1,10 +1,8 @@
 <?php 
 /* Polimorfismo de sobreposição
-
 Na programação Orientação a Objetos existem dois tipos de polimorfimso, Polimorfismo de sobreposição e de sobrecarga.
 No PHP é possível implementar apenas o polimorismo de sobreposição, que faz o uso de uma classe mãe que tem um método padrão, 
 e nas classes filhas tem um método com o mesmo nome, podendo ter assinaturas diferentes. 
-
 */
 // casse mãe 
 class Printer
