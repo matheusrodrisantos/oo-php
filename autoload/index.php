@@ -1,8 +1,13 @@
 <?php 
-require 'class/JsonExport.php';
-require 'class/XmlExport.php';
+
+function autoload($class)
+{
+   require "class/$class.php";    
+}
+
+spl_autoload_register(autoload);
 
 if($_GET['export']=='xml')
-    return(new XmlExport())->doExport();
+    print(new XmlExport())->doExport();
 if($_GET['export']=='json')
-    return(new JsonExport())->doExport();
+    print(new JsonExport())->doExport();
