@@ -1,5 +1,6 @@
 <?php 
-require_once 'FileExport.php';
+namespace Export; 
+use Export\Contract\FileExport; 
 
 class XmlExport
 {

@@ -1,8 +1,13 @@
 <?php 
 
+use Export\XmlExport;
+use Export\JsonExport;
+
 function autoload($class)
 {
-   require "class/$class.php";    
+    $baseFolder='src/';
+    $class= str_replace('\\','/',$class);    
+    require_once ("$baseFolder$class.php");    
 }
 
 spl_autoload_register(autoload);

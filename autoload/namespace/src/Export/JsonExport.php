@@ -1,7 +1,8 @@
 <?php 
-require_once 'FileExport.php';
+namespace Export; 
+use Export\Contract\FileExport; 
 
-class JsonExport implements FileExport
+class JsonExport //implements FileExport
 {
 
     public function doExport()
