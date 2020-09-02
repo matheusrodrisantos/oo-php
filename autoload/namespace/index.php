@@ -3,6 +3,7 @@
 use Export\XmlExport;
 use Export\JsonExport;
 
+/*
 function autoload($class)
 {
     $baseFolder='src/';
@@ -11,6 +12,9 @@ function autoload($class)
 }
 
 spl_autoload_register(autoload);
+*/
+
+require_once("autoload_psr4.php");
 
 if($_GET['export']=='xml')
     print(new XmlExport())->doExport();
