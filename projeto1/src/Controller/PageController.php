@@ -4,7 +4,7 @@ namespace Omini\Controller;
 
 class PageController
 {
-    public function index()
+    public static function index()
     {
         return __CLASS__;
     }
