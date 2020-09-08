@@ -18,13 +18,13 @@ class View
 
     public function __get($index)
     {
-        $this->data[$index];
+        return $this->data[$index];
     }
 
     public function render()
     {
         ob_start();
-        require VIEWS_PATH.$this->view;
+        require VIEW_PATH.$this->view;
         return ob_get_clean();
 
     }
