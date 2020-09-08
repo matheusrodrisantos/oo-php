@@ -1,5 +1,5 @@
 <?php 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../bootstrap.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -35,7 +35,8 @@ if(!class_exists($controller="Omini\Controller\\".ucfirst($controller).'Controll
 if(!method_exists($controller,$action))
 {
     $action='index';
+    $params=$url[1];
 }
 
-$response = call_user_func_array([$controller,$action],[]);
+$response = call_user_func_array([new $controller,$action],[$params]);
 print($response);

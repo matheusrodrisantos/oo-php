@@ -2,10 +2,12 @@
 
 namespace Omini\Controller;
 
+use Omini\View\View;
+
 class PageController
 {
-    public static function index()
+    public function index()
     {
-        return __CLASS__;
+        $view = new View();
     }
 }

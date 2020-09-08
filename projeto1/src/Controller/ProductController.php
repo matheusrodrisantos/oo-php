@@ -4,8 +4,8 @@ namespace Omini\Controller;
 
 class ProductController
 {
-    public function index()
+    public function index($id)
     {
-        
+        return $id;
     }
 }
